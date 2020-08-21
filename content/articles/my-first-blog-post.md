@@ -23,6 +23,14 @@ This is some more info
   </template>
 </info-box>
 
+```js[nuxt.config.js]
+export default {
+  nuxt: "is the best"
+}
+```
+```html[my-first-blog-post.md]
+<p>code styling is easy</p>
+```
 
 ### This is a sub heading
 This is some more info
