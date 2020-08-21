@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.6.1",
+    "@nuxtjs/tailwindcss": "^3.0.0",
     "nuxt": "^2.14.0",
-    "prism-themes": "^1.4.0"
+    "prism-themes": "^1.4.0",
+    "tailwindcss": "^1.7.3"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2"

@@ -47,7 +47,9 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    
     '@nuxtjs/vuetify',
+    '@nuxtjs/tailwindcss'
   ],
   /*
   ** Nuxt.js modules
