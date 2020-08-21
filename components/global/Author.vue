@@ -1,11 +1,19 @@
 <template>
   <div>
-    <img :src="author.image" />
-    <div>
+     <img :src="author.image" />
+    <!-- <div>
       <h4>Author</h4>
       <p>{{ author.name }}</p>
       <p>{{ author.bio }}</p>
-    </div>
+    </div> --> 
+    <NuxtLink :to="`/blog/author/${author.name}`">
+  <img :src="author.img" />
+  <div>
+    <h4>Author</h4>
+    <p>{{ author.name }}</p>
+    <p>{{ author.bio }}</p>
+  </div>
+</NuxtLink>
   </div>
 </template>
 <script>
