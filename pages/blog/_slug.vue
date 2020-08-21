@@ -47,6 +47,8 @@
     <author :author="article.author" />
 
     <prev-next :prev="prev" :next="next" />
+
+    <AppSearchInput />
   </article>
 </template>
 
