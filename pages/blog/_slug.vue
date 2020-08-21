@@ -1,11 +1,30 @@
-<template>
-<!-- <pre> {{ article }} </pre> -->
-  <!-- <article>
-    <nuxt-content :document="article" />
-   </article> -->
-  <!-- <p>Post last updated: {{ article.updatedAt }}</p> -->
-  <!-- <p>Article last updated: {{ formatDate(article.updatedAt) }}</p> -->
+
+// <!-- <pre> {{ article }} </pre> -->
+//   <!-- <article>
+//     <nuxt-content :document="article" />
+//    </article> -->
+//   <!-- <p>Post last updated: {{ article.updatedAt }}</p> -->
+//   <!-- <p>Article last updated: {{ formatDate(article.updatedAt) }}</p> -->
   
+<!-- //   <article>
+//     <h1>{{ article.title }}</h1>
+//     <p>{{ article.description }}</p>
+//     <img :src="article.img" :alt="article.alt" />
+//     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
+
+//     <nuxt-content :document="article" />
+//     <nav>
+//   <ul>
+//     <li v-for="link of article.toc" :key="link.id">
+//        <NuxtLink :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }" :to="`#${link.id}`">{{ link.text }}</NuxtLink> 
+//     </li>
+//   </ul>
+// </nav>
+
+//   </article>
+// </template> -->
+
+<template>
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
@@ -13,17 +32,10 @@
     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
     <nuxt-content :document="article" />
-    <nav>
-  <ul>
-    <li v-for="link of article.toc" :key="link.id">
-       <NuxtLink :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }" :to="`#${link.id}`">{{ link.text }}</NuxtLink> 
-    </li>
-  </ul>
-</nav>
 
+    <author :author="article.author" />
   </article>
 </template>
-
 <script>
   export default {
     async asyncData({ $content, params }) {
